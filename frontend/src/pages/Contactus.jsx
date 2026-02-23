@@ -18,39 +18,38 @@ const fadeInUp = {
   },
 };
 
-/* ================= PAGE ================= */
-
 export default function Contact() {
   return (
-    <div className="bg-white text-slate-900 min-h-screen overflow-hidden">
+    <div className="bg-white text-slate-900 min-h-screen overflow-hidden relative">
 
-      {/* Subtle Background */}
-      <div className="fixed inset-0 -z-10 pointer-events-none">
-        <div className="absolute top-[-20%] left-[-10%] w-[800px] h-[800px] bg-slate-200/40 blur-[160px] rounded-full" />
-        <div className="absolute bottom-[-20%] right-[-10%] w-[800px] h-[800px] bg-slate-200/40 blur-[160px] rounded-full" />
+      {/* Background Glow */}
+      <div className="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
+        <div className="absolute top-[-20%] left-[-20%] w-[300px] sm:w-[500px] lg:w-[800px] h-[300px] sm:h-[500px] lg:h-[800px] bg-slate-200/40 blur-[120px] sm:blur-[160px] rounded-full" />
+        <div className="absolute bottom-[-20%] right-[-20%] w-[300px] sm:w-[500px] lg:w-[800px] h-[300px] sm:h-[500px] lg:h-[800px] bg-slate-200/40 blur-[120px] sm:blur-[160px] rounded-full" />
       </div>
 
-      <div className="max-w-6xl mx-auto px-6 pt-32 pb-28">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-28 lg:pt-32 pb-16 sm:pb-24 lg:pb-28">
 
-
-        {/* ================= CENTERED HEADER ================= */}
+        {/* ================= HEADER ================= */}
 
         <motion.div
           variants={fadeInUp}
           initial="hidden"
           animate="visible"
-          className="text-center max-w-3xl mx-auto mb-20"
+          className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 lg:mb-20"
         >
 
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-full shadow-sm mb-6">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white border border-slate-200 rounded-full shadow-sm mb-4 sm:mb-6">
             <Activity size={14} className="text-slate-500" />
-            <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
+            <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-500">
               Contact Platform
             </span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight mb-6">
-
+          <h1 className="
+            font-bold tracking-tight leading-tight mb-4 sm:mb-6
+            text-[clamp(2rem,6vw,4rem)]
+          ">
             Let’s Build Something <br />
 
             <span className="bg-gradient-to-r from-slate-900 via-slate-600 to-slate-400 bg-clip-text text-transparent">
@@ -59,7 +58,7 @@ export default function Contact() {
 
           </h1>
 
-          <p className="text-lg md:text-xl text-slate-500 leading-relaxed">
+          <p className="text-sm sm:text-base lg:text-lg text-slate-500 leading-relaxed">
             Share your goals with us. Our team will architect scalable,
             future-ready systems tailored to your business.
           </p>
@@ -68,38 +67,36 @@ export default function Contact() {
 
 
 
-        {/* ================= CENTERED FORM CARD ================= */}
+        {/* ================= FORM CARD ================= */}
 
         <motion.div
           variants={fadeInUp}
           initial="hidden"
           animate="visible"
-          className="w-full"
         >
 
           <div className="
             bg-white
             border border-slate-300
-            rounded-3xl
-            p-8 md:p-14
-            shadow-[0_25px_60px_rgba(0,0,0,0.0.15)]
-            hover:shadow-[0_30px_70px_rgba(0,0,0,0.10)]
+            rounded-2xl sm:rounded-3xl
+            p-5 sm:p-8 lg:p-14
+            shadow-lg hover:shadow-xl
             transition
-            max-w-6xl
+            max-w-5xl
             mx-auto
           ">
 
             {/* Form Header */}
-            <div className="flex items-center justify-center gap-2 mb-10">
+            <div className="flex items-center justify-center gap-2 mb-6 sm:mb-8 lg:mb-10">
               <Sparkles size={16} className="text-slate-400" />
-              <span className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+              <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-slate-500">
                 Message Form
               </span>
             </div>
 
 
             {/* FORM */}
-            <form className="grid md:grid-cols-2 gap-6">
+            <form className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
 
               <Input label="Full Name" />
 
@@ -109,27 +106,31 @@ export default function Contact() {
 
               <Textarea />
 
-              <div className="md:col-span-2 flex flex-col md:flex-row items-center justify-between gap-6 mt-6">
+              <div className="
+                sm:col-span-2
+                flex flex-col sm:flex-row
+                items-center justify-between
+                gap-4 sm:gap-6
+                mt-4 sm:mt-6
+              ">
 
-                <p className="text-sm text-slate-400">
+                <p className="text-xs sm:text-sm text-slate-400 text-center sm:text-left">
                   Enterprise-grade encrypted transmission
                 </p>
 
                 <button
                   type="submit"
                   className="
-                    bg-black
-                    text-white
-                    px-10
-                    py-4
+                    bg-black text-white
+                    px-6 sm:px-8 lg:px-10
+                    py-3 sm:py-4
                     rounded-xl
+                    text-sm sm:text-base
                     font-semibold
                     hover:scale-[1.03]
                     hover:bg-slate-800
                     transition
-                    flex
-                    items-center
-                    gap-2
+                    flex items-center gap-2
                   "
                 >
                   Send Message
@@ -148,7 +149,17 @@ export default function Contact() {
 
         {/* ================= FOOTER ================= */}
 
-        <div className="mt-24 pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center text-xs text-slate-400 gap-4">
+        <div className="
+          mt-12 sm:mt-16 lg:mt-24
+          pt-6 sm:pt-8
+          border-t border-slate-200
+          flex flex-col sm:flex-row
+          justify-between items-center
+          text-[10px] sm:text-xs
+          text-slate-400
+          gap-3 sm:gap-4
+          text-center sm:text-left
+        ">
 
           <div className="flex items-center gap-2">
             <TerminalIcon size={14} />
@@ -156,19 +167,20 @@ export default function Contact() {
           </div>
 
           <div>
-            TECH BRAHMAND • AI INFRASTRUCTURE PLATFORM
+            TECHBRAHMAND • AI INFRASTRUCTURE PLATFORM
           </div>
 
         </div>
 
       </div>
+
     </div>
   );
 }
 
 
 
-/* ================= COMPONENTS ================= */
+/* ================= INPUT ================= */
 
 function Input({ label, type = "text" }) {
   return (
@@ -179,11 +191,11 @@ function Input({ label, type = "text" }) {
         required
         placeholder=" "
         className="
-          peer
-          w-full
+          peer w-full
           border border-slate-200
           rounded-xl
-          px-4 py-4
+          px-4 py-3 sm:py-4
+          text-sm sm:text-base
           outline-none
           focus:border-black
           focus:ring-2 focus:ring-black/5
@@ -192,13 +204,11 @@ function Input({ label, type = "text" }) {
       />
 
       <label className="
-        absolute
-        left-4
-        top-2
-        text-xs
-        text-slate-400
+        absolute left-4
+        text-xs text-slate-400
         transition-all
-        peer-placeholder-shown:top-4
+        top-2
+        peer-placeholder-shown:top-3 sm:peer-placeholder-shown:top-4
         peer-placeholder-shown:text-sm
         peer-focus:top-2
         peer-focus:text-xs
@@ -211,26 +221,28 @@ function Input({ label, type = "text" }) {
 }
 
 
+
+/* ================= SELECT ================= */
+
 function Select() {
   return (
-    <div className="md:col-span-2">
+    <div className="sm:col-span-2">
 
       <select className="
         w-full
         border border-slate-200
         rounded-xl
-        px-4 py-4
+        px-4 py-3 sm:py-4
+        text-sm sm:text-base
         outline-none
         focus:border-black
         focus:ring-2 focus:ring-black/5
         transition
       ">
-
         <option>Tech Brahma</option>
         <option>Tech Vishnu</option>
         <option>Tech Mahesh</option>
         <option>Custom AI Services</option>
-
       </select>
 
     </div>
@@ -238,19 +250,22 @@ function Select() {
 }
 
 
+
+/* ================= TEXTAREA ================= */
+
 function Textarea() {
   return (
-    <div className="md:col-span-2 relative">
+    <div className="sm:col-span-2 relative">
 
       <textarea
         rows="4"
         placeholder=" "
         className="
-          peer
-          w-full
+          peer w-full
           border border-slate-200
           rounded-xl
-          px-4 py-4
+          px-4 py-3 sm:py-4
+          text-sm sm:text-base
           outline-none
           resize-none
           focus:border-black
@@ -260,13 +275,11 @@ function Textarea() {
       />
 
       <label className="
-        absolute
-        left-4
-        top-2
-        text-xs
-        text-slate-400
+        absolute left-4
+        text-xs text-slate-400
         transition-all
-        peer-placeholder-shown:top-4
+        top-2
+        peer-placeholder-shown:top-3 sm:peer-placeholder-shown:top-4
         peer-placeholder-shown:text-sm
         peer-focus:top-2
         peer-focus:text-xs

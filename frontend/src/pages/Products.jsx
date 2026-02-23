@@ -85,175 +85,253 @@ export default function Products() {
   ];
 
   return (
-    <div className="pt-32 pb-24 bg-white min-h-screen">
-
-      {/* subtle gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50 to-white -z-10" />
-
-      <div className="max-w-7xl mx-auto px-6">
-
-        {/* HEADER */}
-       <motion.div
-  initial={{ opacity: 0, y: 40 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-  className="text-center mb-24 md:mb-32 max-w-4xl mx-auto"
->
-
-  {/* Badge */}
-  <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full
-  bg-gradient-to-b from-white to-slate-50
-  border border-slate-200
-  shadow-sm
-  mb-8">
-
-    <Shield size={14} className="text-slate-500" />
-
-    <span className="text-[11px] font-semibold tracking-[0.18em] text-slate-600 uppercase">
-      AI Product Suite
-    </span>
-
-  </div>
-
-
-  {/* Heading */}
-  <h1 className="
-    text-4xl
-    sm:text-5xl
-    md:text-6xl
-    lg:text-7xl
-    font-bold
-    tracking-tight
-    leading-[1.05]
-    text-slate-900
-    mb-8
+  <div className="
+    pt-20 sm:pt-24 lg:pt-32
+    pb-16 sm:pb-20 lg:pb-24
+    bg-white min-h-screen relative overflow-hidden
   ">
 
-    Intelligence Built for Every{" "}
-    <span className="
-      bg-gradient-to-r
-      from-slate-900
-      via-slate-600
-      to-slate-400
-      bg-clip-text
-      text-transparent
-      font-bold
-    ">
-      Stage of Evolution
-    </span>
+    {/* background */}
+    <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50 to-white -z-10" />
 
-  </h1>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
+      {/* HEADER */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-center mb-14 sm:mb-20 lg:mb-32 max-w-4xl mx-auto"
+      >
 
-  {/* Subtext */}
-  <p className="
-    text-slate-500
-    text-base
-    sm:text-lg
-    md:text-xl
-    leading-relaxed
-    max-w-2xl
-    mx-auto
-    font-medium
-  ">
+        {/* Badge */}
+        <div className="
+          inline-flex items-center gap-2 sm:gap-3
+          px-4 sm:px-5 py-2
+          rounded-full
+          bg-gradient-to-b from-white to-slate-50
+          border border-slate-200
+          shadow-sm
+          mb-6 sm:mb-8
+        ">
+          <Shield size={14} className="text-slate-500" />
 
-    Deploy specialized AI agents engineered to create, enhance, and transform
-    your business infrastructure with precision and scale.
-
-  </p>
-
-
-  {/* Optional subtle divider */}
-  <div className="mt-12 flex items-center justify-center gap-4">
-
-    <div className="h-px w-12 bg-gradient-to-r from-transparent to-slate-300" />
-
-    <div className="text-xs tracking-[0.2em] text-slate-400 font-semibold uppercase">
-      Enterprise-Grade Intelligence
-    </div>
-
-    <div className="h-px w-12 bg-gradient-to-l from-transparent to-slate-300" />
-
-  </div>
-
-</motion.div>
-
-
-        {/* PRODUCTS GRID */}
-        <motion.div
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-
-          {products.map((item, i) => (
-
-            <motion.div
-              key={i}
-              variants={fadeInUp}
-              className={`group relative p-8 rounded-3xl border ${item.border}
-              bg-white hover:shadow-xl transition duration-500 flex flex-col`}
-            >
-
-              {/* icon */}
-              <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${item.bg} ${item.color}`}>
-                {item.icon}
-              </div>
-
-              {/* title */}
-              <h2 className="text-2xl font-semibold text-slate-900 mb-1">
-                {item.title}
-              </h2>
-
-              <p className={`text-xs uppercase tracking-widest font-semibold mb-4 ${item.color}`}>
-                {item.subtitle}
-              </p>
-
-              {/* desc */}
-              <p className="text-slate-500 mb-6 leading-relaxed">
-                {item.desc}
-              </p>
-
-              {/* features */}
-              <ul className="space-y-3 mb-8">
-                {item.features.map((f, idx) => (
-                  <li key={idx} className="flex items-center gap-3 text-sm text-slate-600">
-                    <div className={`w-2 h-2 rounded-full ${item.bg}`} />
-                    {f}
-                  </li>
-                ))}
-              </ul>
-
-              {/* ideal */}
-              <div className="bg-slate-50 border border-slate-200 p-4 rounded-xl mb-6">
-                <div className="text-xs uppercase text-slate-400 mb-1">
-                  Ideal For
-                </div>
-                <div className="text-sm text-slate-600">
-                  {item.ideal}
-                </div>
-              </div>
-
-              {/* CTA */}
-              <button className="mt-auto bg-slate-900 text-white py-3 rounded-xl font-semibold hover:bg-slate-700 transition flex items-center justify-center gap-2">
-                {item.cta}
-                <ArrowUpRight size={16} />
-              </button>
-
-            </motion.div>
-
-          ))}
-
-        </motion.div>
-
-
-        {/* FOOTER NOTE */}
-        <div className="text-center mt-20 text-xs uppercase tracking-widest text-slate-400 font-semibold">
-          Enterprise-grade • Secure • Zero downtime deployment
+          <span className="
+            text-[10px] sm:text-[11px]
+            font-semibold tracking-[0.18em]
+            text-slate-600 uppercase
+          ">
+            AI Product Suite
+          </span>
         </div>
 
+
+        {/* Heading */}
+        <h1 className="
+          font-bold tracking-tight leading-tight text-slate-900 mb-6 sm:mb-8
+          text-[clamp(2rem,6vw,4.5rem)]
+        ">
+
+          Intelligence Built for Every{" "}
+
+          <span className="
+            bg-gradient-to-r
+            from-slate-900 via-slate-600 to-slate-400
+            bg-clip-text text-transparent
+          ">
+            Stage of Evolution
+          </span>
+
+        </h1>
+
+
+        {/* Subtext */}
+        <p className="
+          text-slate-500
+          text-sm sm:text-base lg:text-lg
+          leading-relaxed
+          max-w-2xl mx-auto
+        ">
+          Deploy specialized AI agents engineered to create, enhance,
+          and transform your business infrastructure.
+        </p>
+
+
+        {/* Divider */}
+        <div className="mt-8 sm:mt-12 flex items-center justify-center gap-3 sm:gap-4">
+
+          <div className="h-px w-8 sm:w-12 bg-gradient-to-r from-transparent to-slate-300" />
+
+          <div className="
+            text-[10px] sm:text-xs
+            tracking-[0.2em]
+            text-slate-400 font-semibold uppercase
+          ">
+            Enterprise-Grade Intelligence
+          </div>
+
+          <div className="h-px w-8 sm:w-12 bg-gradient-to-l from-transparent to-slate-300" />
+
+        </div>
+
+      </motion.div>
+
+
+      {/* PRODUCTS GRID */}
+      <motion.div
+        className="
+          grid
+          grid-cols-1
+          sm:grid-cols-2
+          lg:grid-cols-3
+          gap-4 sm:gap-6 lg:gap-8
+        "
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+
+        {products.map((item, i) => (
+
+          <motion.div
+            key={i}
+            variants={fadeInUp}
+            className={`
+              group relative
+              p-5 sm:p-6 lg:p-8
+              rounded-xl sm:rounded-2xl lg:rounded-3xl
+              border ${item.border}
+              bg-white hover:shadow-xl
+              transition duration-500
+              flex flex-col
+            `}
+          >
+
+            {/* icon */}
+            <div className={`
+              w-12 h-12 sm:w-14 sm:h-14
+              rounded-lg sm:rounded-xl
+              flex items-center justify-center
+              mb-4 sm:mb-6
+              ${item.bg} ${item.color}
+            `}>
+              {item.icon}
+            </div>
+
+
+            {/* title */}
+            <h2 className="
+              text-lg sm:text-xl lg:text-2xl
+              font-semibold text-slate-900 mb-1
+            ">
+              {item.title}
+            </h2>
+
+
+            <p className={`
+              text-[10px] sm:text-xs
+              uppercase tracking-widest
+              font-semibold mb-3 sm:mb-4
+              ${item.color}
+            `}>
+              {item.subtitle}
+            </p>
+
+
+            {/* desc */}
+            <p className="
+              text-sm sm:text-base
+              text-slate-500 mb-4 sm:mb-6
+              leading-relaxed
+            ">
+              {item.desc}
+            </p>
+
+
+            {/* features */}
+            <ul className="space-y-2 sm:space-y-3 mb-4 sm:mb-6 lg:mb-8">
+
+              {item.features.map((f, idx) => (
+
+                <li key={idx} className="
+                  flex items-center gap-3
+                  text-xs sm:text-sm
+                  text-slate-600
+                ">
+
+                  <div className={`w-2 h-2 rounded-full ${item.bg}`} />
+
+                  {f}
+
+                </li>
+
+              ))}
+
+            </ul>
+
+
+            {/* ideal */}
+            <div className="
+              bg-slate-50 border border-slate-200
+              p-3 sm:p-4
+              rounded-lg sm:rounded-xl
+              mb-4 sm:mb-6
+            ">
+
+              <div className="
+                text-[10px] sm:text-xs
+                uppercase text-slate-400 mb-1
+              ">
+                Ideal For
+              </div>
+
+              <div className="
+                text-xs sm:text-sm
+                text-slate-600
+              ">
+                {item.ideal}
+              </div>
+
+            </div>
+
+
+            {/* CTA */}
+            <button className="
+              mt-auto
+              bg-slate-900 text-white
+              py-2.5 sm:py-3
+              text-sm sm:text-base
+              rounded-lg sm:rounded-xl
+              font-semibold
+              hover:bg-slate-700
+              transition
+              flex items-center justify-center gap-2
+            ">
+
+              {item.cta}
+
+              <ArrowUpRight size={16} />
+
+            </button>
+
+          </motion.div>
+
+        ))}
+
+      </motion.div>
+
+
+      {/* FOOTER NOTE */}
+      <div className="
+        text-center mt-12 sm:mt-16 lg:mt-20
+        text-[10px] sm:text-xs
+        uppercase tracking-widest
+        text-slate-400 font-semibold
+      ">
+        Enterprise-grade • Secure • Zero downtime deployment
       </div>
+
     </div>
-  );
+  </div>
+);
 }

@@ -12,42 +12,79 @@ export default function Footer() {
   return (
     <footer className="relative bg-black text-white overflow-hidden">
 
-      {/* subtle top gradient line */}
+      {/* top line */}
       <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
 
 
       {/* MAIN */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24">
+      <div className="
+        max-w-7xl mx-auto
+        px-4 sm:px-6 lg:px-8
+        py-12 sm:py-16 lg:py-24
+      ">
 
-        <div className="grid lg:grid-cols-12 gap-16">
+        <div className="
+          grid
+          grid-cols-1
+          md:grid-cols-2
+          lg:grid-cols-12
+          gap-10 sm:gap-12 lg:gap-16
+        ">
 
           {/* BRAND */}
-          <div className="lg:col-span-4">
+          <div className="
+            md:col-span-2
+            lg:col-span-4
+            text-center md:text-left
+          ">
 
-            <div className="text-2xl font-bold tracking-tight mb-4">
-              TECH BRAHMAND
+            <div className="
+              text-xl sm:text-2xl
+              font-bold tracking-tight
+              mb-3 sm:mb-4
+            ">
+              TECHBRAHMAND
             </div>
 
-            <p className="text-gray-400 leading-relaxed mb-8 max-w-sm">
-
-              AI infrastructure platform for building, modernizing, and transforming
-              business systems with intelligent automation.
-
+            <p className="
+              text-gray-400
+              text-sm sm:text-base
+              leading-relaxed
+              mb-6 sm:mb-8
+              max-w-sm
+              mx-auto md:mx-0
+            ">
+              AI infrastructure platform for building, modernizing,
+              and transforming business systems.
             </p>
 
 
             {/* SOCIAL */}
-            <div className="flex gap-4">
+            <div className="
+              flex justify-center md:justify-start
+              gap-3 sm:gap-4
+            ">
 
-              {[Twitter, Linkedin, Github].map((Icon, i)=>(
+              {[Twitter, Linkedin, Github].map((Icon, i) => (
+
                 <button
                   key={i}
-                  className="p-3 rounded-lg border border-white/10 text-gray-400
-                  hover:text-white hover:border-white hover:bg-white/5 transition">
+                  className="
+                    p-2.5 sm:p-3
+                    rounded-lg
+                    border border-white/10
+                    text-gray-400
+                    hover:text-white
+                    hover:border-white
+                    hover:bg-white/5
+                    transition
+                  "
+                >
 
-                  <Icon size={18}/>
+                  <Icon size={16} />
 
                 </button>
+
               ))}
 
             </div>
@@ -57,17 +94,28 @@ export default function Footer() {
 
 
           {/* LINKS */}
-          <div className="lg:col-span-8 grid sm:grid-cols-3 gap-12">
+          <div className="
+            md:col-span-2
+            lg:col-span-8
+            grid grid-cols-2 sm:grid-cols-3
+            gap-8 sm:gap-10 lg:gap-12
+            text-center sm:text-left
+          ">
 
             {Object.entries(links).map(([title, items]) => (
 
               <div key={title}>
 
-                <div className="font-semibold text-white mb-5">
+                <div className="
+                  font-semibold
+                  text-white
+                  text-sm sm:text-base
+                  mb-4 sm:mb-5
+                ">
                   {title}
                 </div>
 
-                <ul className="space-y-3">
+                <ul className="space-y-2 sm:space-y-3">
 
                   {items.map(item => (
 
@@ -75,7 +123,15 @@ export default function Footer() {
 
                       <a
                         href="#"
-                        className="group flex items-center gap-2 text-gray-400 hover:text-white transition"
+                        className="
+                          group flex items-center
+                          justify-center sm:justify-start
+                          gap-2
+                          text-gray-400
+                          text-sm sm:text-base
+                          hover:text-white
+                          transition
+                        "
                       >
 
                         {item}
@@ -108,13 +164,29 @@ export default function Footer() {
       {/* BOTTOM */}
       <div className="border-t border-white/10">
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="
+          max-w-7xl mx-auto
+          px-4 sm:px-6 lg:px-8
+          py-4 sm:py-6
+          flex flex-col md:flex-row
+          justify-between items-center
+          gap-3 sm:gap-4
+          text-center md:text-left
+        ">
 
-          <div className="text-sm text-gray-500">
-            © {new Date().getFullYear()} Tech Brahmand. All rights reserved.
+          <div className="
+            text-xs sm:text-sm
+            text-gray-500
+          ">
+            © {new Date().getFullYear()} TechBrahmand. All rights reserved.
           </div>
 
-          <div className="flex gap-6 text-sm text-gray-500">
+          <div className="
+            flex flex-wrap justify-center md:justify-end
+            gap-4 sm:gap-6
+            text-xs sm:text-sm
+            text-gray-500
+          ">
 
             <a href="#" className="hover:text-white transition">
               Privacy
@@ -135,8 +207,13 @@ export default function Footer() {
       </div>
 
 
-      {/* subtle glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-white/5 blur-[120px]" />
+      {/* glow */}
+      <div className="
+        absolute bottom-0 left-1/2 -translate-x-1/2
+        w-[250px] sm:w-[350px] lg:w-[500px]
+        h-[120px] sm:h-[160px] lg:h-[200px]
+        bg-white/5 blur-[80px] sm:blur-[100px] lg:blur-[120px]
+      " />
 
     </footer>
   );
