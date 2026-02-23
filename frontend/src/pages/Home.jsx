@@ -59,65 +59,161 @@ const Home = () => {
 
           <div className="grid lg:grid-cols-12 gap-12 items-center">
 
-            {/* Left Content */}
-            <div className="lg:col-span-7">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-              >
+           {/* Left Content */}
+<div className="lg:col-span-7 flex items-center">
 
-                {/* Badge */}
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-200 text-xs font-semibold uppercase tracking-widest mb-8 shadow-sm">
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                  </span>
-                  The Future of Enterprise AI
-                </div>
+  <motion.div
+    initial={{ opacity: 0, x: -40 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+    className="max-w-2xl"
+  >
 
-                {/* Heading */}
-                <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.95] mb-8 text-slate-900">
+    {/* Premium Badge */}
+    <div className="
+      inline-flex items-center gap-3
+      px-4 py-2
+      rounded-full
+      bg-white
+      border border-slate-200
+      shadow-sm
+      mb-6 sm:mb-8
+    ">
 
-                  Evolve your <br />
+      <span className="relative flex h-2 w-2">
 
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-slate-500 to-slate-400">
-                    Infrastructure
-                  </span>
+        <span className="
+          animate-ping absolute inline-flex
+          h-full w-full
+          rounded-full
+          bg-emerald-400 opacity-75
+        "></span>
 
-                </h1>
+        <span className="
+          relative inline-flex
+          rounded-full
+          h-2 w-2
+          bg-emerald-500
+        "></span>
 
-                {/* Description */}
-                <p className="text-md md:text-xl text-slate-600 max-w-xl mb-10 leading-relaxed">
-                  Tech Brahmand architects the bridge between legacy systems and autonomous AI intelligence —
-                  helping enterprises build, modernize, and scale with precision.
-                </p>
+      </span>
 
-                {/* Buttons */}
-                <div className="flex flex-wrap gap-5">
-                  <Link to="/contact">
-                    <button className="group bg-black text-white px-8 py-4 rounded-full font-semibold flex items-center gap-2 hover:bg-slate-800 transition-all active:scale-95 shadow-xl shadow-black/20">
+      <span className="
+        text-[10px] sm:text-xs
+        font-semibold uppercase
+        tracking-[0.18em]
+        text-slate-600
+      ">
+        Enterprise AI Infrastructure
+      </span>
 
-                      Get Started
+    </div>
 
-                      <ArrowRight
-                        size={18}
-                        className="group-hover:translate-x-1 transition-transform"
-                      />
 
-                    </button>
-                  </Link>
-                  <Link to="/contact">
-                    <button className="px-8 py-4 rounded-full font-semibold border border-slate-300 hover:bg-white hover:shadow-md transition-all">
+    {/* Heading */}
+    <h1 className="
+      font-bold tracking-tight leading-[1.02]
+      text-[clamp(2.5rem,6vw,5.5rem)]
+      text-slate-900
+      mb-6 sm:mb-8
+    ">
 
-                      View Case Studies
+      Evolve your <br />
 
-                    </button>
-                  </Link>
-                </div>
+      <span className="
+        bg-gradient-to-r
+        from-slate-900
+        via-slate-600
+        to-slate-400
+        bg-clip-text
+        text-transparent
+      ">
+        Infrastructure with AI
+      </span>
 
-              </motion.div>
-            </div>
+    </h1>
+
+
+    {/* Description */}
+    <p className="
+      text-sm sm:text-base lg:text-lg
+      text-slate-500
+      leading-relaxed
+      mb-8 sm:mb-10
+      max-w-lg
+    ">
+
+      Tech Brahmand architects intelligent infrastructure that bridges legacy
+      systems with autonomous AI — enabling enterprises to scale, modernize,
+      and evolve without disruption.
+
+    </p>
+
+
+    {/* Buttons */}
+    <div className="
+      flex flex-col sm:flex-row
+      items-start sm:items-center
+      gap-4 sm:gap-5
+    ">
+
+      {/* Primary Button */}
+      <Link to="/contact">
+
+        <button className="
+          group
+          bg-black text-white
+          px-6 sm:px-8 py-3 sm:py-4
+          rounded-full
+          font-semibold
+          text-sm sm:text-base
+          flex items-center gap-2
+          hover:bg-slate-800
+          hover:shadow-xl hover:shadow-black/20
+          transition-all duration-300
+          active:scale-[0.97]
+        ">
+
+          Get Started
+
+          <ArrowRight
+            size={18}
+            className="
+              group-hover:translate-x-1
+              transition-transform duration-300
+            "
+          />
+
+        </button>
+
+      </Link>
+
+
+      {/* Secondary Button */}
+      <Link to="/contact">
+
+        <button className="
+          px-6 sm:px-8 py-3 sm:py-4
+          rounded-full
+          font-semibold
+          text-sm sm:text-base
+          border border-slate-300
+          hover:bg-white
+          hover:shadow-md
+          transition-all duration-300
+        ">
+
+          View Case Studies
+
+        </button>
+
+      </Link>
+
+    </div>
+
+  </motion.div>
+
+</div>
 
 
             {/* Right Visual Element */}
