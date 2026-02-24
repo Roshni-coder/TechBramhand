@@ -42,8 +42,19 @@ const Home = () => {
     <div className="bg-[#fafafa] text-slate-900 font-sans selection:bg-black selection:text-white">
 
       {/* --- HERO SECTION --- */}
-      <section className="relative px-4 sm:!px-0 flex items-center pt-24 sm:pt-32 pb-2 sm:pb-12 overflow-hidden">
+      <section className="relative px-4 sm:px-0 flex items-center pt-20 sm:pt-32 pb-6 overflow-hidden">
 
+    {/* Gradient */}
+          {/* Grid Background */}
+        <div
+          className="absolute inset-0 z-0 opacity-[0.03]"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}
+        />
+
+        {/* Gradient glow background */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] !bg-red-500 h-[500px]  blur-[140px] rounded-full -z-10" />
         {/* Layout */}
         <div className="grid grid-cols-12 mx-auto sm:py-10 py-4 mb-3 gap-x-4 sm:gap-x-2 items-center">
 
@@ -158,7 +169,7 @@ const Home = () => {
       sm:col-span-5
       md:col-span-5
       lg:col-span-5
-      relative flex justify-center !mb-10
+      relative flex justify-center !mb-12
     "
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
