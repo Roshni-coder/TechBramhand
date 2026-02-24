@@ -42,250 +42,229 @@ const Home = () => {
     <div className="bg-[#fafafa] text-slate-900 font-sans selection:bg-black selection:text-white">
 
       {/* --- HERO SECTION --- */}
-      <section className="relative min-h-screen flex items-center pt-28 sm:pt-20 overflow-hidden">
+<section className="relative min-h-screen flex items-center pt-24 sm:pt-28 overflow-hidden">
 
-        {/* Grid Background */}
-        <div
-          className="absolute inset-0 z-0 opacity-[0.03]"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }}
-        />
+  {/* Background grid */}
+  <div
+    className="absolute inset-0 z-0 opacity-[0.03]"
+    style={{
+      backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z'/%3E%3C/g%3E%3C/svg%3E")`,
+    }}
+  />
 
-        {/* Gradient glow background */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] !bg-red-500 h-[500px]  blur-[140px] rounded-full -z-10" />
+  {/* Responsive glow */}
+  <div className="
+    absolute top-0 left-1/2 -translate-x-1/2
+    w-[350px] sm:w-[600px] lg:w-[1000px]
+    h-[250px] sm:h-[350px] lg:h-[500px]
+    bg-red-500/20
+    blur-[120px]
+    rounded-full
+    -z-10
+  "/>
 
-        <div className="max-w-7xl mx-auto px-4 lg:px-8 w-full relative z-10">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
 
-          <div className="grid lg:grid-cols-12 gap-12 items-center">
+    {/* Layout */}
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
-           {/* Left Content */}
-<div className="lg:col-span-7 flex items-center">
+      {/* LEFT CONTENT */}
+      <div className="lg:col-span-7">
 
-  <motion.div
-    initial={{ opacity: 0, x: -40 }}
-    animate={{ opacity: 1, x: 0 }}
-    transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-    className="max-w-2xl"
-  >
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-2xl"
+        >
 
-    {/* Premium Badge */}
-    <div className="
-      inline-flex items-center gap-3
-      px-4 py-2
-      rounded-full
-      bg-white
-      border border-slate-200
-      shadow-sm
-      mb-6 sm:mb-8
-    ">
+          {/* Badge */}
+          <div className="
+            inline-flex items-center gap-3
+            px-4 py-2
+            rounded-full
+            bg-white
+            border border-slate-200
+            shadow-sm
+            mb-6 sm:mb-8
+          ">
 
-      <span className="relative flex h-2 w-2">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute h-full w-full rounded-full bg-emerald-400 opacity-75"/>
+              <span className="relative h-2 w-2 rounded-full bg-emerald-500"/>
+            </span>
 
-        <span className="
-          animate-ping absolute inline-flex
-          h-full w-full
-          rounded-full
-          bg-emerald-400 opacity-75
-        "></span>
+            <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.18em] text-slate-600">
+              Enterprise AI Infrastructure
+            </span>
 
-        <span className="
-          relative inline-flex
-          rounded-full
-          h-2 w-2
-          bg-emerald-500
-        "></span>
+          </div>
 
-      </span>
+          {/* Heading */}
+          <h1 className="
+            font-bold tracking-tight leading-[1.05]
+            text-[clamp(2.9rem,8vw,5.7rem)]
+            text-slate-900
+            mb-6 sm:mb-8
+          ">
+            Evolve your <br />
 
-      <span className="
-        text-[10px] sm:text-xs
-        font-semibold uppercase
-        tracking-[0.18em]
-        text-slate-600
-      ">
-        Enterprise AI Infrastructure
-      </span>
+            <span className="
+              bg-gradient-to-r
+              from-slate-900
+              via-slate-600
+              to-slate-400
+              bg-clip-text
+              text-transparent
+            ">
+              Infrastructure 
+            </span>
+            <br />
+  <span className="
+              bg-gradient-to-r
+              from-slate-900
+              via-slate-600
+              to-slate-400
+              bg-clip-text
+              text-transparent
+            ">
+             with AI
+            </span>
+          </h1>
 
-    </div>
+          {/* Description */}
+          <p className="
+            text-base sm:text-lg lg:text-xl
+            text-slate-500
+            leading-relaxed
+            mb-8 sm:mb-10
+            max-w-lg
+          ">
+            Tech Brahmand architects intelligent infrastructure that bridges legacy
+            systems with autonomous AI — enabling enterprises to scale, modernize,
+            and evolve without disruption.
+          </p>
+
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-5">
+
+            <Link to="/contact">
+              <button className="
+                w-full sm:w-auto
+                group
+                bg-black text-white
+                px-6 sm:px-8 py-3 sm:py-4
+                rounded-full
+                font-semibold
+                flex items-center justify-center gap-2
+                hover:bg-slate-800
+                hover:shadow-xl hover:shadow-black/20
+                transition-all duration-300
+              ">
+                Get Started
+                <ArrowRight size={18}
+                  className="group-hover:translate-x-1 transition-transform"/>
+              </button>
+            </Link>
+
+            <Link to="/contact">
+              <button className="
+                w-full sm:w-auto
+                px-6 sm:px-8 py-3 sm:py-4
+                rounded-full
+                font-semibold
+                border border-slate-300
+                hover:bg-white
+                hover:shadow-md
+                transition-all duration-300
+              ">
+                View Case Studies
+              </button>
+            </Link>
+
+          </div>
+
+        </motion.div>
+
+      </div>
 
 
-    {/* Heading */}
-    <h1 className="
-      font-bold tracking-tight leading-[1.02]
-      text-[clamp(2.5rem,6vw,5.5rem)]
-      text-slate-900
-      mb-6 sm:mb-8
-    ">
+      {/* RIGHT IMAGE */}
+      <motion.div
+        className="lg:col-span-5 relative flex justify-center"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+      >
 
-      Evolve your <br />
+        <div className="relative w-full max-w-md lg:max-w-full">
 
-      <span className="
-        bg-gradient-to-r
-        from-slate-900
-        via-slate-600
-        to-slate-400
-        bg-clip-text
-        text-transparent
-      ">
-        Infrastructure with AI
-      </span>
-
-    </h1>
-
-
-    {/* Description */}
-    <p className="
-      text-sm sm:text-base lg:text-lg
-      text-slate-500
-      leading-relaxed
-      mb-8 sm:mb-10
-      max-w-lg
-    ">
-
-      Tech Brahmand architects intelligent infrastructure that bridges legacy
-      systems with autonomous AI — enabling enterprises to scale, modernize,
-      and evolve without disruption.
-
-    </p>
-
-
-    {/* Buttons */}
-    <div className="
-      flex flex-col sm:flex-row
-      items-start sm:items-center
-      gap-4 sm:gap-5
-    ">
-
-      {/* Primary Button */}
-      <Link to="/contact">
-
-        <button className="
-          group
-          bg-black text-white
-          px-6 sm:px-8 py-3 sm:py-4
-          rounded-full
-          font-semibold
-          text-sm sm:text-base
-          flex items-center gap-2
-          hover:bg-slate-800
-          hover:shadow-xl hover:shadow-black/20
-          transition-all duration-300
-          active:scale-[0.97]
-        ">
-
-          Get Started
-
-          <ArrowRight
-            size={18}
+          {/* Responsive image */}
+          <img
+            src={img}
+            alt="AI Infrastructure"
             className="
-              group-hover:translate-x-1
-              transition-transform duration-300
+              w-full
+              h-auto
+              object-contain
             "
           />
 
-        </button>
+          {/* Glass card */}
+          <div className="
+            relative sm:absolute
+            mt-6 sm:mt-0
+            sm:-bottom-10
+            sm:left-6 sm:right-6
+            bg-white/80
+            backdrop-blur-xl
+            border border-white/60
+            p-4 sm:p-6
+            rounded-2xl
+            shadow-lg
+          ">
 
-      </Link>
+            <div className="flex items-center justify-between mb-3">
 
-
-      {/* Secondary Button */}
-      <Link to="/contact">
-
-        <button className="
-          px-6 sm:px-8 py-3 sm:py-4
-          rounded-full
-          font-semibold
-          text-sm sm:text-base
-          border border-slate-300
-          hover:bg-white
-          hover:shadow-md
-          transition-all duration-300
-        ">
-
-          View Case Studies
-
-        </button>
-
-      </Link>
-
-    </div>
-
-  </motion.div>
-
-</div>
-
-
-            {/* Right Visual Element */}
-            <motion.div
-              className="lg:col-span-5 relative"
-              initial={{ opacity: 0, scale: 0.85 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1 }}
-            >
-
-              {/* Glow */}
-              {/* <div className="absolute -top-12 -right-12 w-75 h-72 bg-blue-200/40 rounded-full blur-[120px] -z-10"></div>
-        <div className="absolute -bottom-12 -left-12 w-75 h-72 bg-purple-200/40 rounded-full blur-[120px] -z-10"></div> */}
-
-              {/* Image Card */}
-              <div className="relative mb-10 ">
-
-                <img
-                  src={img}
-                  alt="AI Infrastructure"
-                  className="w-full h-[330px] sm:h-[430px] "
-                />
-
-                {/* Glass Overlay */}
-              </div>
-              <div className="absolute sm:-bottom-10 bottom-1 left-6 right-6 bg-white/70 backdrop-blur-xl border border-white/60 p-6 rounded-2xl shadow-lg">
-
-                <div className="flex items-center justify-between mb-4">
-
-                  <div className="flex -space-x-3">
-                    {[1, 2, 3, 4].map((i) => (
-                      <div
-                        key={i}
-                        className="w-8 h-8 rounded-full border-2 border-white bg-gradient-to-br from-slate-100 to-slate-300 shadow-sm"
-                      />
-                    ))}
-                  </div>
-
-                  <span className="text-sm font-semibold text-slate-700">
-                    325k+ users joined
-                  </span>
-
-                </div>
-
-                <div className="space-y-2">
-
-                  <div className="h-1 w-full bg-slate-200 rounded-full ">
-
-                    <motion.div
-                      initial={{ width: 0 }}
-                      animate={{ width: "85%" }}
-                      transition={{ duration: 2, delay: 0.5 }}
-                      className="h-full bg-gradient-to-r from-black to-slate-600"
-                    />
-
-                  </div>
-
-                  <p className="text-sm font-bold uppercase tracking-widest text-slate-600">
-                    Efficiency Optimized: 85%
-                  </p>
-
-                </div>
-
+              <div className="flex -space-x-3">
+                {[1,2,3,4].map(i => (
+                  <div
+                    key={i}
+                    className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border-2 border-white bg-gradient-to-br from-slate-100 to-slate-300"
+                  />
+                ))}
               </div>
 
-            </motion.div>
+              <span className="text-xs sm:text-sm font-semibold text-slate-700">
+                325k+ users joined
+              </span>
+
+            </div>
+
+            <div className="h-1 w-full bg-slate-200 rounded-full mb-2">
+              <motion.div
+                initial={{ width: 0 }}
+                animate={{ width: "85%" }}
+                transition={{ duration: 2 }}
+                className="h-full bg-gradient-to-r from-black to-slate-600"
+              />
+            </div>
+
+            <p className="text-xs sm:text-sm font-bold uppercase tracking-widest text-slate-600">
+              Efficiency Optimized: 85%
+            </p>
 
           </div>
 
         </div>
 
-      </section>
+      </motion.div>
+
+    </div>
+
+  </div>
+
+</section>
       {/* --- STATS SECTION --- */}
       <section className="relative py-14 sm:py-20 lg:py-18 bg-gradient-to-b from-white to-slate-50">
 
@@ -475,7 +454,7 @@ const Home = () => {
 
           {/* TITLE */}
           <h3 className="
-            text-lg sm:text-xl lg:text-2xl xl:text-3xl
+            text-3xl sm:text-3xl lg:text-3xl xl:text-3xl
             font-bold mb-3 sm:mb-4
           ">
             {agent.name}
