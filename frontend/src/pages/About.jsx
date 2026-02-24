@@ -51,13 +51,13 @@ export default function About() {
         <div className="absolute bottom-[-20%] left-[-20%] w-[300px] sm:w-[500px] lg:w-[600px] h-[300px] sm:h-[500px] lg:h-[600px] bg-purple-50/50 blur-[120px] rounded-full" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-28 lg:pt-32 pb-16 sm:pb-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-22 sm:pt-28 lg:pt-32 pb-16 sm:pb-24">
 
         {/* ================= HERO ================= */}
         <motion.header
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          className="max-w-4xl mx-auto text-center mb-16 sm:mb-24 lg:mb-32"
+          className="max-w-4xl mx-auto text-center mb-12 sm:mb-24 lg:mb-32"
         >
           <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm mb-6">
             <Activity size={14} className="text-slate-500" />
@@ -66,7 +66,7 @@ export default function About() {
             </span>
           </div>
 
-          <h1 className="font-semibold tracking-tight leading-tight mb-6 text-[clamp(2rem,6vw,4.5rem)]">
+          <h1 className="font-semibold tracking-tight leading-tight mb-6 text-[clamp(1.5rem,6vw,4.5rem)]">
             The Intelligence Behind Evolution
           </h1>
 

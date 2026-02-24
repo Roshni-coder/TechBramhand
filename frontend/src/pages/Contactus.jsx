@@ -28,7 +28,7 @@ export default function Contact() {
         <div className="absolute bottom-[-20%] right-[-20%] w-[300px] sm:w-[500px] lg:w-[800px] h-[300px] sm:h-[500px] lg:h-[800px] bg-slate-200/40 blur-[120px] sm:blur-[160px] rounded-full" />
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-28 lg:pt-32 pb-16 sm:pb-24 lg:pb-28">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-22 sm:pt-28 lg:pt-32 pb-16 sm:pb-24 lg:pb-28">
 
         {/* ================= HEADER ================= */}
 
@@ -36,7 +36,7 @@ export default function Contact() {
           variants={fadeInUp}
           initial="hidden"
           animate="visible"
-          className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 lg:mb-20"
+          className="text-center max-w-3xl mx-auto mb-4 sm:mb-16 lg:mb-20"
         >
 
           <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white border border-slate-200 rounded-full shadow-sm mb-4 sm:mb-6">
@@ -48,7 +48,7 @@ export default function Contact() {
 
           <h1 className="
             font-bold tracking-tight leading-tight mb-4 sm:mb-6
-            text-[clamp(2rem,6vw,4rem)]
+            text-[clamp(1.5rem,6vw,4rem)]
           ">
             Let’s Build Something <br />
 

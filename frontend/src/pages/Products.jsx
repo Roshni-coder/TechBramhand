@@ -86,7 +86,7 @@ export default function Products() {
 
   return (
   <div className="
-    pt-20 sm:pt-24 lg:pt-32
+    pt-28 sm:pt-24 lg:pt-32
     pb-16 sm:pb-20 lg:pb-24
     bg-white min-h-screen relative overflow-hidden
   ">
@@ -101,7 +101,7 @@ export default function Products() {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-center mb-14 sm:mb-20 lg:mb-32 max-w-4xl mx-auto"
+        className="text-center mb-16 sm:mb-20 lg:mb-32 max-w-4xl mx-auto"
       >
 
         {/* Badge */}
@@ -112,7 +112,7 @@ export default function Products() {
           bg-gradient-to-b from-white to-slate-50
           border border-slate-200
           shadow-sm
-          mb-6 sm:mb-8
+          mb-2 sm:mb-8
         ">
           <Shield size={14} className="text-slate-500" />
 
@@ -129,7 +129,7 @@ export default function Products() {
         {/* Heading */}
         <h1 className="
           font-bold tracking-tight leading-tight text-slate-900 mb-6 sm:mb-8
-          text-[clamp(2rem,6vw,4.5rem)]
+          text-[clamp(1.5rem,6vw,4.5rem)]
         ">
 
           Intelligence Built for Every{" "}
@@ -148,7 +148,7 @@ export default function Products() {
         {/* Subtext */}
         <p className="
           text-slate-500
-          text-sm sm:text-base lg:text-lg
+          text-[12px] sm:text-base lg:text-lg
           leading-relaxed
           max-w-2xl mx-auto
         ">
@@ -158,12 +158,12 @@ export default function Products() {
 
 
         {/* Divider */}
-        <div className="mt-8 sm:mt-12 flex items-center justify-center gap-3 sm:gap-4">
+        <div className="mt-6 sm:mt-12 flex items-center justify-center gap-3 sm:gap-4">
 
           <div className="h-px w-8 sm:w-12 bg-gradient-to-r from-transparent to-slate-300" />
 
           <div className="
-            text-[10px] sm:text-xs
+            text-[8px] sm:text-xs
             tracking-[0.2em]
             text-slate-400 font-semibold uppercase
           ">
@@ -221,8 +221,8 @@ export default function Products() {
 
             {/* title */}
             <h2 className="
-              text-lg sm:text-xl lg:text-2xl
-              font-semibold text-slate-900 mb-1
+              text-2xl sm:text-xl lg:text-2xl
+              font-bold text-slate-900 mb-1
             ">
               {item.title}
             </h2>

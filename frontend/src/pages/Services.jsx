@@ -85,7 +85,7 @@ export default function Services() {
 
   return (
   <div className="
-    pt-20 sm:pt-24 lg:pt-32
+    pt-22 sm:pt-24 lg:pt-32
     pb-16 sm:pb-20 lg:pb-24
     bg-white min-h-screen relative overflow-hidden
   ">
@@ -101,7 +101,7 @@ export default function Services() {
         variants={fadeInUp}
         initial="hidden"
         animate="visible"
-        className="text-center mb-14 sm:mb-20 lg:mb-24 max-w-4xl mx-auto"
+        className="text-center mb-10 sm:mb-20 lg:mb-24 max-w-4xl mx-auto"
       >
 
         {/* badge */}
@@ -128,7 +128,7 @@ export default function Services() {
         {/* heading */}
         <h1 className="
           font-bold tracking-tight text-slate-900 mb-4 sm:mb-6
-          text-[clamp(2rem,6vw,4.5rem)]
+          text-[clamp(1.5rem,6vw,4.5rem)]
         ">
 
           Evolving Technology <br />
@@ -204,8 +204,8 @@ export default function Services() {
 
             {/* title */}
             <h3 className="
-              text-lg sm:text-xl lg:text-2xl
-              font-semibold text-slate-900
+              text-xl sm:text-xl lg:text-2xl
+              font-bold text-slate-900
               mb-3 sm:mb-4
             ">
               {service.title}
