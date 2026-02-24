@@ -385,7 +385,7 @@ const Home = () => {
 
       <h2 className="
         font-bold tracking-tight leading-tight mb-4 sm:mb-6
-        text-[clamp(1.8rem,5vw,3.5rem)]
+        text-[clamp(2rem,6vw,4.5rem)]
       ">
         The Trinity of <br className="hidden sm:block" />
         Evolution
